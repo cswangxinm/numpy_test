@@ -4,3 +4,5 @@ import scipy as sp
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import scipy.optimize as optimize
+
+print('hello')
