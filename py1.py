@@ -54,6 +54,7 @@ b = a.tolist()
 #Special array:
 a = np.zeros((2, 3)) # 2-by-3 array
 b = np.eye(3)
+c = np.ones((2, 3))
 
 #indices:
 x = np.arange(20).reshape(5, 4)
@@ -61,7 +62,10 @@ row, col = np.indices((2, 3))
 x[row, col] #equals x[0:2, 0:3] as index
 
 #I/O
-from StringIO
+from StringIO import StringIO
+data = '1, 2, 3\n4, 5, 6'
+x = np.genfromtxt(StringIO(data), delimiter=',')
+print(x)
 
 
 
