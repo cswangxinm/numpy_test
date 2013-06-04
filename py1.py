@@ -1,5 +1,6 @@
 '''
 @date 3013-6-23
+
 '''
 
 import numpy as np
@@ -54,8 +55,13 @@ b = a.tolist()
 a = np.zeros((2, 3)) # 2-by-3 array
 b = np.eye(3)
 
+#indices:
+x = np.arange(20).reshape(5, 4)
+row, col = np.indices((2, 3))
+x[row, col] #equals x[0:2, 0:3] as index
 
-
+#I/O
+from StringIO
 
 
 
