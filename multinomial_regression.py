@@ -1,3 +1,8 @@
+'''
+This is a test of multinomial regression. but the limitation is that
+it only specify for degree 3 polynomial regression.
+'''
+
 from numpy.linalg import *
 from scipy import *
 import matplotlib.pyplot as plt
