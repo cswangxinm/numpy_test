@@ -32,6 +32,13 @@ print('##########')
 for i in range(1,15):
     pri(eval('a'+str(i)))
 
+#array conversion:
+x = np.arange(10)
+#use assignment
+x.shape = (2, 5)
+#use function:
+np.reshape(x, (2, 5))
+print(x)
 
 #Type conversion:
 b1 = np.int64(np.array([2, 3, 4]))
@@ -66,7 +73,14 @@ from StringIO import StringIO
 data = '1, 2, 3\n4, 5, 6'
 x = np.genfromtxt(StringIO(data), delimiter=',')
 print(x)
-
-
-
+#String space
+data = '1, abc , 2\n 3, xxx, 4'
+x = np.genfromtxt(StringIO(data), delimiter=',') #ie [[1 nan 2], [3, nan, 4]]
+#x = np.genfromtxt(StringIO(data), dtype='|S5') #have space strings
+#x = np.genfromtxt(StringIO(data), dtype='|S5', autostrip=True) #no space
+#Assume comments:
+#np.genfromtxt(StringIO(data), comments='#', delimiter=',')
+data = '\n'.join(str(i) for i in range(10))
+np.genfromtxt(StringIO(data), skip_header=3, skip_footer=5) #only 3, 4
+#'usecols' attribute specify cols.
 
