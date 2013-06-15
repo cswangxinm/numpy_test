@@ -1,8 +1,6 @@
-from matplotlib.pyplot import  *
+fr = open('readfile.txt')
 
-print ioff()
-print ion()
-print ishold()
-print isinteractive()
-print jet()
-#
+for i in range(4):
+    z = fr.readline()
+    for j in range(5):
+        print int(z[j])
